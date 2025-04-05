@@ -1,0 +1,13 @@
+<div class="chart-container">
+  @if (isBrowser) {
+  <highcharts-chart
+    [Highcharts]="Highcharts"
+    [options]="chartOptions"
+    [update]="updateFlag"
+    [callbackFunction]="chartCallback"
+    style="width: 100%; height: 500px; display: block"
+  ></highcharts-chart>
+  } @else {
+  <div class="ssr-placeholder">Chart will load in browser</div>
+  }
+</div>
